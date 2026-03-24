@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <!-- Exercise 1 requirement: layers in CSS, background image (see CSS) -->
+    <div class="overlay-layer"></div>
+    
+    <div class="container z-layer">
+        <!-- Unified Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="App" width="50">
+                <h2>Expense Tracker</h2>
+            </div>
+            <ul class="nav-links" style="font-size: 0.9rem;">
+                <li><a href="index.html">Dashboard (Ex 1)</a></li>
+                <li><a href="login.html" class="active">Login (Ex 3)</a></li>
+                <li><a href="budget.html">Budget Model</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="history.html">History</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content" style="display: flex; justify-content: center; align-items: flex-start;">
+            <div class="login-container">
+                <div class="card glass-card" style="margin-top: 0;">
+            <h2>Secure Login</h2>
+            <p>Access your dashboard and manage finances.</p>
+            
+            <!-- Exercise 3 requirement: HTML form for validation with fields user name, password, ok button -->
+            <form id="loginForm" onsubmit="return validateLogin(event)">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <!-- Exercise 1 requirement: text box -->
+                    <input type="text" id="username" name="username" placeholder="Enter username">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password (min 6 chars)">
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Format: 1234567890">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                </div>
+
+                <div class="input-group form-inline">
+                    <label>Account Type:</label>
+                    <!-- Exercise 1 requirement: radio button -->
+                    <input type="radio" id="personal" name="acc_type" value="personal" checked>
+                    <label for="personal">Personal</label>
+                    <input type="radio" id="business" name="acc_type" value="business">
+                    <label for="business">Business</label>
+                </div>
+
+                <div class="input-group form-inline">
+                    <!-- Exercise 1 requirement: check box -->
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <div class="input-group">
+                    <label for="notes">Additional Notes</label>
+                    <!-- Exercise 1 requirement: text area -->
+                    <textarea id="notes" name="notes" rows="2" placeholder="Any comments..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <!-- Exercise 1 requirement: date -->
+                    <input type="date" id="dob" name="dob">
+                </div>
+                
+                <div class="actions">
+                    <!-- Exercise 1 requirement: submit, reset -->
+                    <button type="submit" class="btn primary-btn">Ok / Login</button>
+                    <button type="reset" class="btn secondary-btn">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

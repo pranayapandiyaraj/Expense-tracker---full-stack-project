@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body style="font-family: Arial; margin: 0; padding: 0;">
+    <div style="display: flex; min-height: 100vh; background: #fdfdfd;">
+        <!-- Unified Sidebar Navigation -->
+        <aside style="width: 250px; background: #2d2d2d; padding: 2rem; color: #fff;">
+            <h2>Expense Tracker</h2>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="index.html" style="color: #4da6ff; text-decoration: none;">Dashboard (Ex 1)</a></li>
+                <li><a href="login.html" style="color: #4da6ff; text-decoration: none;">Login (Ex 3)</a></li>
+                <li><a href="budget.html" style="color: #4da6ff; text-decoration: none;">Budget Model</a></li>
+                <li><a href="transaction.html" style="color: #4da6ff; text-decoration: none;">Transactions</a></li>
+                <li><a href="analytics.html" style="color: #4da6ff; text-decoration: none;">Analytics</a></li>
+                <li><a href="history.html" style="color: #4da6ff; text-decoration: none;">History</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html" style="color: #fff; text-decoration: none; font-weight: bold;">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet" style="color: #4da6ff; text-decoration: none;">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp" style="color: #4da6ff; text-decoration: none;">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp" style="color: #4da6ff; text-decoration: none;">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp" style="color: #4da6ff; text-decoration: none;">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml" style="color: #4da6ff; text-decoration: none;">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank" style="color: #4da6ff; text-decoration: none;">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank" style="color: #4da6ff; text-decoration: none;">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main style="padding: 2rem; flex: 1;">
+            <h2>Feedback Form</h2>
+            <form action="FeedbackServlet" method="POST" style="background: #fff; padding: 20px; border: 1px solid #ccc; max-width: 400px;">
+                <label>Name:</label><br>
+                <input type="text" name="name" required style="width: 100%; margin-bottom: 10px; padding: 5px;"><br>
+                
+                <label>Email:</label><br>
+                <input type="email" name="email" required style="width: 100%; margin-bottom: 10px; padding: 5px;"><br>
+                
+                <label>Message:</label><br>
+                <textarea name="message" rows="4" style="width: 100%; margin-bottom: 10px; padding: 5px;" required></textarea><br>
+                
+                <input type="submit" value="Submit Feedback" style="padding: 10px 15px; background: #2196F3; color: white; border: none; cursor: pointer;">
+            </form>
+        </main>
+    </div>
+</body>
+</html>

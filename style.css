@@ -1,0 +1,232 @@
+/* style.css - fulfilling Ex 2 CSS Requirements */
+
+/* 1. Different font and text styles */
+/* 2. Selectors (element, class, id), Borders, Margins and Padding, Font variant, Font color, Box model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    /* 2. Set a background image for the page */
+    background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+    /* 5. Adding a Customized cursor */
+    cursor: crosshair; 
+}
+
+/* 4. Working with layers */
+.overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.85);
+    z-index: 1; /* Layer behind the content */
+}
+
+/* Beyond Normal Flow(use any 1 Position) */
+.z-layer {
+    position: relative;
+    z-index: 10;
+}
+
+/* Typography styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-variant: small-caps; /* CSS Ex 2 Font Variant */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.text-subtle {
+    font-style: italic; /* Font style */
+    color: #aaaaaa;
+}
+
+/* 3. Define styles for links */
+a {
+    color: #4da6ff;
+    text-decoration: none; /* Text Decoration */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ccff;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #b366ff;
+}
+
+/* Layout and Box Model */
+.container {
+    display: flex; /* Display Property */
+    min-height: 100vh;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 2rem;
+    border-right: 1px solid #444; /* Borders */
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.nav-links li {
+    margin-bottom: 1rem;
+}
+
+.nav-links li b, .nav-links li i, .nav-links li u, .nav-links li s {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* 2. Set a background image for single element on the page */
+.card {
+    background: rgba(45, 45, 45, 0.8);
+    background-image: linear-gradient(135deg, rgba(77, 166, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #555;
+}
+
+/* Display and Flex */
+.cards-layer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.income .amount { color: #4CAF50; }
+.expense .amount { color: #F44336; }
+.balance .amount { color: #2196F3; }
+
+/* Table styling */
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse; /* Borders */
+    margin-top: 1rem;
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+/* Ex 2 Text Wrap */
+.transaction-table td {
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Text Wrap */
+}
+
+.type-income { color: #4CAF50; font-weight: 600; }
+.type-expense { color: #F44336; font-weight: 600; }
+
+.ticker {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Forms & UI Elements */
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], textarea, input[type="range"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: #2a2a2a;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-inline label { margin-bottom: 0; }
+.form-inline input { width: auto; }
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: #2196F3;
+    color: white;
+}
+
+.primary-btn:hover { background: #1976D2; }
+
+.secondary-btn {
+    background: #555;
+    color: white;
+}
+
+.secondary-btn:hover { background: #444; }
+
+.glass-card {
+    background: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 500px;
+    margin: 5rem auto;
+}
+
+.login-page {
+    display: block; /* Different layout for login page */
+}

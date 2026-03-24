@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Tracker | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Exercise 1 requirement: Marquee tag -->
+    <marquee behavior="scroll" direction="left" class="ticker">
+        Welcome to Smart Expense Tracker. Keep an eye on your budget to secure your financial future!
+    </marquee>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <!-- Exercise 1 requirement: Image tag -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="App Logo" width="50" height="50">
+                <h2>Expense<br>Tracker</h2>
+            </div>
+            
+            <!-- Unified Sidebar Navigation -->
+            <ul class="nav-links" style="font-size: 0.9rem;">
+                <li><a href="index.html" class="active"><b>Dashboard (Ex 1)</b></a></li>
+                <li><a href="login.html"><i>Login (Ex 3)</i></a></li>
+                <li><a href="budget.html">Budget Model</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="history.html">History</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Dashboard Overview</h1>
+                <p>Track your daily income and expenses dynamically.</p>
+            </header>
+
+            <section class="cards-layer">
+                <div class="card income">
+                    <h3>Total Income</h3>
+                    <p class="amount">+$5,000</p>
+                </div>
+                <div class="card expense">
+                    <h3>Total Expenses</h3>
+                    <p class="amount">-$2,340</p>
+                </div>
+                <div class="card balance">
+                    <h3>Current Balance</h3>
+                    <p class="amount">$2,660</p>
+                </div>
+            </section>
+
+            <section class="budget-section">
+                <h2>Monthly Budget Progress</h2>
+                <!-- Exercise 1 requirement: Progress tag -->
+                <p>General Spending (50%)</p>
+                <progress max="100" value="50" class="progress-bar"></progress>
+                
+                <p>Savings Goal (75%)</p>
+                <progress max="100" value="75" class="progress-bar"></progress>
+            </section>
+
+            <section class="history-section">
+                <h2>Recent Transactions</h2>
+                
+                <!-- Exercise 1 requirement: Range tag (For filtering display) -->
+                <div class="filter-box">
+                    <label for="amountRange">Filter by Amount Range:</label>
+                    <input type="range" id="amountRange" name="amountRange" min="0" max="1000" value="500">
+                </div>
+
+                <!-- Exercise 1 requirement: Table tag -->
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Grocery Store</td>
+                            <td>Food</td>
+                            <td class="type-expense">Expense</td>
+                            <td>-$120.00</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-23</td>
+                            <td>Monthly Salary</td>
+                            <td>Income</td>
+                            <td class="type-income">Income</td>
+                            <td>+$5000.00</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-22</td>
+                            <td>Internet Bill</td>
+                            <td>Utilities</td>
+                            <td class="type-expense">Expense</td>
+                            <td>-$60.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expenses SYSTEM "expense.dtd">
+<?xml-stylesheet type="text/xsl" href="expense.xsl"?>
+<expenses>
+    <transaction id="t1" type="income">
+        <date>2026-03-24</date>
+        <description>Monthly Salary</description>
+        <category>Salary</category>
+        <amount>5000</amount>
+    </transaction>
+    <transaction id="t2" type="expense">
+        <date>2026-03-25</date>
+        <description>Grocery Shopping</description>
+        <category>Food</category>
+        <amount>150</amount>
+    </transaction>
+</expenses>

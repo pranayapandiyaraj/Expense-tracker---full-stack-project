@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Unified Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="App" width="50">
+                <h2>Expense Tracker</h2>
+            </div>
+            <ul class="nav-links" style="font-size: 0.9rem;">
+                <li><a href="index.html">Dashboard (Ex 1)</a></li>
+                <li><a href="login.html">Login (Ex 3)</a></li>
+                <li><a href="budget.html">Budget Model</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="analytics.html" class="active">Analytics</a></li>
+                <li><a href="history.html">History</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Analytics & Visualization</h1>
+                <p>Monitor your financial trends visually.</p>
+            </header>
+
+            <section class="card glass-card" style="margin: 2rem 0; text-align: center;">
+                <h3>Monthly Spending Trend</h3>
+                <div style="height: 300px; display: flex; align-items: flex-end; justify-content: center; gap: 20px; margin-top: 30px; border-bottom: 2px solid #555; border-left: 2px solid #555; padding-bottom: 10px;">
+                    <div style="height: 40%; width: 50px; background: #4CAF50;" title="Jan: $400"></div>
+                    <div style="height: 60%; width: 50px; background: #2196F3;" title="Feb: $600"></div>
+                    <div style="height: 80%; width: 50px; background: #F44336;" title="Mar: $800"></div>
+                    <div style="height: 20%; width: 50px; background: #9c27b0;" title="Apr: $200"></div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 40px; margin-top: 10px; font-weight: bold;">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

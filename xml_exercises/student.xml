@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<students>
+    <student>
+        <rollno>101</rollno>
+        <name>Alice Brown</name>
+        <subject>Math</subject>
+        <marks>95</marks>
+    </student>
+    <student>
+        <rollno>102</rollno>
+        <name>Bob Smith</name>
+        <subject>Science</subject>
+        <marks>88</marks>
+    </student>
+</students>

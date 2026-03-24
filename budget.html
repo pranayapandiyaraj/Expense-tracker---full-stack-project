@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning | Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        function updateBudget() {
+            var total = parseFloat(document.getElementById('totalBudget').value);
+            var spent = parseFloat(document.getElementById('spentAmount').value);
+            if(isNaN(total) || isNaN(spent)) return;
+
+            var percentage = (spent / total) * 100;
+            document.getElementById('budgetProgress').value = percentage;
+            
+            var remainingMsg = document.getElementById('remainingMsg');
+            if(percentage > 100) {
+                remainingMsg.innerHTML = "<span style='color: #F44336;'>Over budget by $" + (spent - total).toFixed(2) + "</span>";
+            } else {
+                remainingMsg.innerHTML = "<span style='color: #4CAF50;'>Remaining: $" + (total - spent).toFixed(2) + "</span>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Unified Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="App" width="50">
+                <h2>Expense Tracker</h2>
+            </div>
+            <ul class="nav-links" style="font-size: 0.9rem;">
+                <li><a href="index.html">Dashboard (Ex 1)</a></li>
+                <li><a href="login.html">Login (Ex 3)</a></li>
+                <li><a href="budget.html" class="active">Budget Model</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Budget Planning</h1>
+                <p class="text-subtle">Set limits and monitor how much you've spent.</p>
+            </header>
+
+            <section class="card glass-card" style="max-width: 600px; margin: 2rem 0;">
+                <h3>Set Monthly Budget</h3>
+                <div class="input-group">
+                    <label>Total Budget ($)</label>
+                    <input type="number" id="totalBudget" onkeyup="updateBudget()" placeholder="e.g. 1000">
+                </div>
+                <div class="input-group">
+                    <label>Amount Spent ($)</label>
+                    <input type="number" id="spentAmount" onkeyup="updateBudget()" placeholder="e.g. 450">
+                </div>
+
+                <h3>Real-Time Budget Usage</h3>
+                <progress id="budgetProgress" max="100" value="0" class="progress-bar" style="width: 100%; height: 25px;"></progress>
+                <p id="remainingMsg" style="margin-top: 10px; font-weight: bold;">Remaining: $0.00</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

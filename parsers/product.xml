@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="P001">
+        <name>Laptop Pro</name>
+        <price>1200.00</price>
+    </product>
+    <product id="P002">
+        <name>Wireless Mouse</name>
+        <price>25.50</price>
+    </product>
+</products>

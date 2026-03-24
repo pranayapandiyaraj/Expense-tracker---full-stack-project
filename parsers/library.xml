@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book isbn="123-456">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <publisher>Scribner</publisher>
+        <year>1925</year>
+    </book>
+    <book isbn="987-654">
+        <title>1984</title>
+        <author>George Orwell</author>
+        <publisher>Secker and Warburg</publisher>
+        <year>1949</year>
+    </book>
+</library>

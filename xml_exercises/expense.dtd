@@ -1,0 +1,9 @@
+<!ELEMENT expenses (transaction+)>
+<!ELEMENT transaction (date, description, category, amount)>
+<!ATTLIST transaction 
+          id ID #REQUIRED
+          type (income|expense) #REQUIRED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>

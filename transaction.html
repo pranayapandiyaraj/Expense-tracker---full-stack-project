@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        function saveTransaction(e) {
+            e.preventDefault();
+            alert("Transaction added successfully!");
+            document.getElementById('transForm').reset();
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Unified Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="App" width="50">
+                <h2>Expense Tracker</h2>
+            </div>
+            <ul class="nav-links" style="font-size: 0.9rem;">
+                <li><a href="index.html">Dashboard (Ex 1)</a></li>
+                <li><a href="login.html">Login (Ex 3)</a></li>
+                <li><a href="budget.html">Budget Model</a></li>
+                <li><a href="transaction.html" class="active">Transactions</a></li>
+                <hr style="border:0; border-top:1px solid #444; margin: 10px 0;">
+                <li><a href="feedback.html">Feedback (Servlet Ex 5)</a></li>
+                <li><a href="EmployeeServlet">Employees (Servlet Ex 5)</a></li>
+                <li><a href="calculator.jsp">Calculator (JSP Ex 6)</a></li>
+                <li><a href="registration.jsp">Register (JSP Ex 6)</a></li>
+                <li><a href="random.jsp">Random Num (JSP Ex 6)</a></li>
+                <li><a href="xml_exercises/expense.xml">XML Report (Ex 7)</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Node.js Server (Ex 9)</a></li>
+                <li><a href="http://localhost:3001" target="_blank">React App (Ex 10)</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Add New Transaction</h1>
+            </header>
+
+            <section class="card glass-card" style="max-width: 600px; margin: 2rem 0;">
+                <form id="transForm" onsubmit="return saveTransaction(event)">
+                    <div class="input-group">
+                        <label>Description</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Amount</label>
+                        <input type="number" step="0.01" required>
+                    </div>
+                    <div class="input-group form-inline">
+                        <input type="radio" name="type" id="t-inc" value="income"><label for="t-inc">Income</label>
+                        <input type="radio" name="type" id="t-exp" value="expense" checked><label for="t-exp">Expense</label>
+                    </div>
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Save</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
